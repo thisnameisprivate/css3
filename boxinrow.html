@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>flexible box</title>
+    <style type="text/css">
+    /*
+        display: flex; 默认为水平排列,效果等同于 display:flex; flex-direction:row;
+        display: flex; flex-direction:column; 垂直排列
+
+        justify-content-对齐方式:
+        center: 居中
+        flex-end: 靠右
+        flex-start: 靠左
+        space-around: 居中自带外边距
+        space-between: 铺满自带外边距
+
+
+     */
+        .container{ display:flex; flex-direction:row; justify-content: space-between; width:800px; height:1000px; border:1px solid #000;}
+        .incontainerbox{ height:200px; width:200px; border:1px solid #ccc;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="incontainerbox">flex-item1</div>
+        <div class="incontainerbox">flex-item2</div>
+        <div class="incontainerbox">flex-item3</div>
+    </div>
+</body>
+</html>
