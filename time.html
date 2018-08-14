@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>this is document</title>
+    <script>
+        window.onload = function ()
+        {
+            var inputs = document.getElementsByTagName('input');
+            var inputsone_val = parseInt(inputs[0].value);
+            var inputstwo_val = parseInt(inputs[1].value);
+            function Countdown ()
+            {
+                // 判断秒是否为0,不为0直接执行减操作
+                if (inputstwo_val == 0) {
+                    // 当秒和分钟都为0时,清除定时器clearInterval();
+                    if (inputsone_val == 0 && inputstwo_val == 0) {
+                        document.getElementById('div').innerHTML = "fllow me fllow me! get money! get money!";
+                        clearInterval(inter);
+                        return false;
+                    }
+                    // 如果秒为0,但是分钟大于或等于1那么分钟执行减操作,秒替换为60
+                    if (inputsone_val >= 1) {
+                        inputsone_val = inputsone_val - 1;
+                        inputs[0].value = inputsone_val;
+                        inputstwo_val = 60;
+                        inputs[1].value = inputstwo_val;
+                    }
+                }
+                // 当秒不为0时执行的减操作
+                if (inputstwo_val >= 0) {
+                    inputstwo_val = inputstwo_val - 1;
+                    inputs[1].value = inputstwo_val;
+                }
+                console.log(inputsone_val + 'm' + inputstwo_val + 's');
+            }
+            // 每隔一秒调用一次上面的Countdown()方法
+            var inter = setInterval(Countdown, 1000);
+        }
+    </script>
+</head>
+<body>
+    <input type="text" value="0">
+    <input type="text" value="10">
+    <input type="submit">
+</body>
+</html>

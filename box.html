@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS 3-box</title>
+    <style type="text/css">
+        .container{height:200px; width:200px; border:1px solid #ccc;}
+        div.box{box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; width:50%; border:1rem solid #000; float:right; text-align:center;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">left</div>
+        <div class="box">right</div>
+        <div class="box">left</div>
+        <div class="box">right</div>
+        <div class="box">left</div>
+        <div class="box">right</div>
+        <div class="box">left</div>
+        <div class="box">right</div>
+        <div class="box">left</div>
+        <div class="box">right</div>
+    </div>
+</body>
+</html>

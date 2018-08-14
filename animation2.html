@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS 3-animation2</title>
+    <style type="text/css">
+        .container{height:200px; width:200px; border:1px solid #ccc; background:red; animation:myfirst 2s linear 2s infinite alternate;position:relative;}
+        @keyframes myfirst {
+            0%    {background:blue; left:0px; top:0px;}
+            25%    {background:green; left:200px; top:0px;}
+            50%    {background:greenyellow; left:200px; top:200px;}
+            75%    {background:grey; left:0px; top:200px;}
+            100%    {background:red; left:0px; top:0px;}
+        }
+    </style>
+</head>
+<body>
+    <div class="container"></div>
+</body>
+</html>
